@@ -1,3 +1,13 @@
+#
+# Default Flask settings
+#
 DEBUG = False
 SECRET_KEY = 'A_UNIQUE_KEY_FOR_YOUR_APPLICATION'
-GOONHILLY_LOG = 'PATH_TO_LOGFILE'
+
+
+#
+# Default Goonhilly settings
+#
+GOONHILLY_LOG_FILE = 'PATH_TO_LOGFILE'
+GOONHILLY_AUTHORIZED_SOURCE_TAGS = ['SOURCE_TAG_1',
+                                    'SOURCE_TAG_2', ]
