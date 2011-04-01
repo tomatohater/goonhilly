@@ -21,7 +21,7 @@ def clean(s):
     return s
 
 
-@app.route('/log/<sourceapp>/', methods=['POST', 'GET',])
+@app.route('/<sourceapp>/', methods=['POST', 'GET',])
 def log():
     l = ['%s=%s' % (clean(k), clean(v)) for k, v in request.values.iteritems()]
     l.append('%s=%s' % (clean('client_id'), clean(request.environ.get('HTTP_X_FORWARDED_FOR') or request.environ.get('REMOTE_ADDR') or '-')))
